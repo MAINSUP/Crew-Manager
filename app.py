@@ -3,10 +3,9 @@ import pandas as pd
 import gspread
 from oauth2client.service_account import ServiceAccountCredentials
 from datetime import date
+import auth
 
-# AUTH
-scope = ["https://spreadsheets.google.com/feeds", "https://www.googleapis.com/auth/drive"]
-creds = ServiceAccountCredentials.from_json_keyfile_name("D:\PycharmProjects\Crew_manager\credentials.json", scope)
+creds = auth.authenticate()
 client = gspread.authorize(creds)
 sheet = client.open("CrewAssignments").sheet1
 
