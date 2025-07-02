@@ -1,7 +1,7 @@
 from oauth2client.service_account import ServiceAccountCredentials
 import streamlit as st
 st.write(st.secrets)
-print(st.secrets["google"]["type"])
+print(st.secrets["type"])
 
 # AUTH
 def authenticate():
