@@ -4,7 +4,7 @@ import gspread
 from oauth2client.service_account import ServiceAccountCredentials
 from datetime import date
 import auth
-
+st.write(st.secrets)
 creds = auth.authenticate()
 client = gspread.authorize(creds)
 sheet = client.open("CrewAssignments").sheet1
